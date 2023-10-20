@@ -1,11 +1,24 @@
-/*Write a function that takes an array of numbers as an argument. 
-The function should return a new array that contains only the unique elements 
-from the original array, in the same order they appeared. Also, ensure that the 
-solution has a time complexity better than O(n^2). */
+/**classic one: FizzBuzz.
 
-function uniqueElements(arr) {
-    let uniqueSet = new Set(arr);
-    return Array.from(uniqueSet);
+Write a program that prints the numbers from 1 to 100. 
+But for multiples of three, print "Fizz" instead of the number, 
+and for the multiples of five, print "Buzz". For numbers that are
+ multiples of both three and five, print "FizzBuzz". */
+
+function FizBuz(number) {
+  for (let i = 1; i <= number; i++) {
+    let result = "";
+
+    if (i % 3 === 0) {
+      result += "Fizz";
+    }
+
+    if (i % 5 === 0) {
+      result += "Buzz!";
+    }
+
+    console.log(result || i);
   }
-  
-console.log(uniqueElements([1,2,111,3,2,1,1,2,3,1,2,3,1,]))
+}
+
+console.log(FizBuz(20))
