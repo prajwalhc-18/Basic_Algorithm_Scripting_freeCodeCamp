@@ -1,13 +1,5 @@
-const people = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 17 },
-  { name: "Charlie", age: 30 },
-];
+const numbers = [3, 7, 2, 9, 1];
 
-const sortByScore = (x) => {
-  return x.sort((l,k)=>k.age-l.age)
-}
+const findMax = (arr) => Math.max(...arr);
 
-console.log(sortByScore(people));
-
-
+console.log(findMax(numbers)); // Output: 9
